@@ -1,43 +1,17 @@
-
-
-.bus-img{
-  width: 100%;
-}
-
-
-.head{
-  
-  display: flex;
- margin: 2% 0;
-  
-   width: 100%;
-  align-items: center;
-  flex-direction: column;
-  border-bottom: 2px dashed silver;
-
-  h2{
-font-weight: bold;
-    align-self: flex-start;
-  }
-p{
-  font-size: 2rem;
-}
-
-}
-
 .home {
+  @media @mobile {
+    width: 90%;
+  }
+  #main-header {
+    h2 {
+      margin-top: 20px;
+    }
 
-
-
-
-
-  .btn{
-    text-align: center;
-    .custom-btn(teal, 200px, white)
-}
-
-
-
+    p {
+      padding-bottom: 20px;
+      border-bottom: 2px dashed @navigation-border;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -45,19 +19,33 @@ p{
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      flex-direction: column;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }
@@ -65,6 +53,10 @@ p{
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -81,6 +73,10 @@ p{
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -92,13 +88,26 @@ p{
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 75%;
+      }
+
+      button {
+        .buttonStyles(@main-bg, @button-bg, @font-color);
+
+        @media @mobile {
+          width: 100%;
+        }
+      }
     }
   }
-
-
-
-}// home
-
+} // home

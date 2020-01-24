@@ -1,50 +1,44 @@
 // Navigation Styles here
 
-.navbar{
+header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding:0 4% ;
-border-bottom: 2px dashed silver;
-margin-top: 1%;
-font-weight: bold;
-
-.funbus{
-    margin-left: 23%;
-
-}
-    .links{
-        margin-right: 23%;
-      justify-content: space-evenly;
+    align-items: center;
+    padding: 25px 0;
+  
+    @media @mobile {
+      flex-direction: column;
+      padding-top: 15px;
+      padding-bottom: 8px;
     }
-    a{ 
-      margin: 0 1.5rem;
-        font-size: 1.5rem;
+  
+    h1 {
+      @media @mobile {
+        font-size: 3.1rem;
+      }
     }
-}
+  
+    .nav-links {
+      display: flex;
+      justify-content: space-around;
+      width: 335px;
+      padding-right: 15px;
+      font-size: 1.6rem;
+  
+      @media @mobile {
+        margin-top: 15px;
+        justify-content: space-between;
+        width: 85%;
+      }
+  
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
 
 
-@media @phone5{
-    .navbar{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding:0 4% ;
-    border-bottom: 2px dashed silver;
-    margin-top: 1%;
-    font-weight: bold;
-    
-    .funbus{
-        margin: 0;
-    
-    }
-        .links{
-            margin: 0;
-          justify-content: space-evenly;
-        }
-        a{ 
-          
-            font-size: 1.5rem;
-        }
-    }
 
-}
+
